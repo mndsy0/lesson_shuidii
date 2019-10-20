@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>黄梅撩崽计</title>
+</head>
+<body>
+    <script>
+    //alert('先变富婆，后撩崽');
+    class Flower {
+        constructor(type,n) {  //构造函数 new 运行 
+            this.type = type;  //属性
+            this.n= n;
+        }
+    }
+    var huangmei = {
+        name:'梅崽',
+        age: 20,
+        favorites:['吃','喝','玩','看帅哥','撩崽'],
+        room:425,
+        yz:70,
+        isSingle: true,
+        sendFlower: function(target){
+        var flower = new Flower('红玫瑰',11);
+        console.log(flower.type,flower.n);
+        console.log(flower);
+        target.receiveFlower(this,flower);
+        }
+    }
+    var heyanlin = {
+        name: '何崽',
+        age: 21,
+        isGoodMod:false,/*心情不好*/
+        receiveFlower: function(sender,flower) {
+            if(!this.isGoodMod){
+                console.log('丑拒,朕心情不佳');
+            }else{
+                console.log('万达走一波');
+            }
+        //console.log(sender,flower);
+        }
+    }
+    var xiaogan = {
+        hometown:'赣州安远',
+        receiveFlower:function(sender,flower){
+            // if (sender.name == '梅崽') {
+            //     console.log('梅妹妹，还是我们在一起吧.....');
+            // }else{
+                setTimeout(function(){
+                    heyanlin.isGoodMod =true;
+                 heyanlin.receiveFlower(sender,flower);    
+                },10000)
+               
+            // }
+        }
+    }
+       huangmei.sendFlower(xiaogan);
+    
+    </script>
+</body>
+</html>
