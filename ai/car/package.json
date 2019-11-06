@@ -1,0 +1,12 @@
+{
+  "name": "lesson_shuidi",
+  "version": "1.0.0",
+  "description": "-前端\r css+js+es+vue+react  pc站 + mobile站 +app\r -后端\r java ?\r node +go\r -名企就业能力课\r Linux + leetcode +设计模式 + 网络",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
